@@ -9,7 +9,7 @@
 
 import UIKit
 
-final class MonthCell: KVKCollectionViewCell {
+public final class MonthCell: KVKCollectionViewCell {
     
     var customViewFrame: CGRect {
         let customY = dateLabel.frame.origin.y + dateLabel.frame.height + 3
@@ -54,7 +54,7 @@ final class MonthCell: KVKCollectionViewCell {
         return longGesture
     }()
     
-    override var isHighlighted: Bool {
+   public override var isHighlighted: Bool {
         didSet {
             guard style.month.isAnimateSelection else { return }
             
@@ -182,7 +182,7 @@ final class MonthCell: KVKCollectionViewCell {
         }
     }
     
-    var day: Day = .empty() {
+   public var day: Day = .empty() {
         didSet {
             isUserInteractionEnabled = day.type != .empty
             
@@ -469,7 +469,7 @@ final class MonthCell: KVKCollectionViewCell {
 
 extension MonthCell: UIGestureRecognizerDelegate {
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
                            shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }

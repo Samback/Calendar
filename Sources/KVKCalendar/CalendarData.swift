@@ -184,7 +184,7 @@ struct Month {
     var weeks: Int
 }
 
-struct Day {
+public struct Day {
     let type: DayType
     var date: Date?
     var events: [Event]
@@ -199,7 +199,7 @@ struct Day {
         self.type = .empty
     }
     
-    init(type: DayType, date: Date?, data: [Event]) {
+    public init(type: DayType, date: Date?, data: [Event]) {
         self.type = type
         self.events = data
         self.date = date

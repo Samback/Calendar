@@ -9,7 +9,7 @@
 
 import UIKit
 
-class KVKCollectionViewCell: UICollectionViewCell {
+public class KVKCollectionViewCell: UICollectionViewCell {
     
     var isSkeleton: Bool = false
     
